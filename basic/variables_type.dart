@@ -17,8 +17,10 @@ main() {
   name = "Ahmad Irfan";
 
   num age = 32;
+  double earthWeight = 3.212;
 
   print(name);
   print(country);
   print(age);
+  print(earthWeight);
 }
