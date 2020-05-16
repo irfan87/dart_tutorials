@@ -26,3 +26,4 @@ doc/api/
 *.js.map
 
 # End of https://www.gitignore.io/api/dart
+.vscode/
