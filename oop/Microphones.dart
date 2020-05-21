@@ -7,6 +7,9 @@ class Microphones {
   int model = 4312;
   double watt;
 
+  // we use the most simpliness constructor by Dart
+  Microphones(this.name, this.color, this.model, this.watt);
+
   void turnOn() {
     print("${name} is turn on");
   }
@@ -24,12 +27,10 @@ class Microphones {
 }
 
 main() {
-  var mic = Microphones();
-
-  mic.name = 'Audio Technica';
-  mic.color = 'black';
-  mic.model = 1231;
-  mic.watt = 2.2;
+  var mic = Microphones('Audio Technica', 'black', 1231, 2.2);
+  
+  // try to override the models to see what happen
+  mic.model = 3111;
   
   mic.turnOn();
   mic.setVolume();
