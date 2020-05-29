@@ -1,5 +1,16 @@
 main() {
   var list = [];
+  var onlyString = List<String>();
+
+  onlyString.add('John');
+  onlyString.add('Locky');
+  onlyString.add('Ivy');
+
+  for (String list in onlyString) {
+    print(list);
+  }
+
+  print('\n');
 
   if (list.isEmpty) {
     list.add(10);
