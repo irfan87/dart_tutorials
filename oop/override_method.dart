@@ -1,24 +1,33 @@
-// inheritance
+// override methods
 
 class Person {
-  String firstName, lastName, nationality;
+  String firstName, lastName, nationality, profession;
   int age;
 
   void showName() {
     print(this.firstName);
   }
-}
 
-class Bonnie extends Person {
-  String profession;
-  bool isMarried = true;
+  void sayHello() {
+    print('Say hello');
+  }
 
   void showProfession() {
     print(this.profession);
   }
 
-  void sayHello() {
-    print('Say hello');
+  void showNationality() {
+    print('an american');
+  }
+}
+
+class Bonnie extends Person {
+  bool isMarried = true;
+
+  @override
+  void showProfession() {
+    // TODO: implement showProfession
+    print('an awesome programmer');
   }
 
   void showMaritalStatus() {
@@ -27,6 +36,12 @@ class Bonnie extends Person {
     } else {
       print('is still single');
     }
+  }
+
+  @override
+  void showNationality() {
+    // TODO: implement showNationality
+    print('an australian');
   }
 }
 
@@ -40,6 +55,18 @@ class Tony extends Person {
     else
       print('he cannot skate');
   }
+
+  @override
+  void sayHello() {
+    // TODO: implement sayHello
+    print('Yo!');
+  }
+
+  @override
+  void showProfession() {
+    // TODO: implement showProfession
+    print('a marvelous pro skater');
+  }
 }
 
 main() {
@@ -50,13 +77,16 @@ main() {
 
   var tony_hawk = Tony();
   tony_hawk.firstName = 'tony hawk';
-  tony_hawk.profession = 'skater';
   tony_hawk.canSkate = true;
 
   bonnie.showName();
   bonnie.showProfession();
   bonnie.showMaritalStatus();
+  bonnie.showNationality();
 
   tony_hawk.showName();
+  tony_hawk.showProfession();
   tony_hawk.heCanSkate();
+  tony_hawk.sayHello();
+  tony_hawk.showNationality();
 }
